@@ -37,7 +37,7 @@ def main():
     tracker.end()
 
     # Step 4: Similarity Search
-    query = "What is policy title?"
+    query = "REVIEW DATE?"
 
     tracker.start("Similarity Search")
 
