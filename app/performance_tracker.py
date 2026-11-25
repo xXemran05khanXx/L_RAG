@@ -22,7 +22,7 @@ class PerformanceTracker:
         print("\n========== PERFORMANCE REPORT ==========")
 
         for step, duration in self.timings.items():
-                  print(f"{step<30} {duration:.2f} sec")
+                  print(f"{step:<30} {duration:.2f} sec")
 
         total = sum(self.timings.values())
 

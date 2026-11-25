@@ -5,7 +5,7 @@ from app.document_loader import load_and_split_docs
 from app.vector_store import create_vector_store
 from app.retriever import retriver_documents
 from app.rag_chain import generate_answer
-from app.llm import get_llm
+from app.llms import get_llms
 from app.performance_tracker import PerformanceTracker
 
 def main():
@@ -32,7 +32,7 @@ def main():
     # Step 3: Load Gemini
     tracker.start("Gemini Initialization")
 
-    llm = get_llm()
+    llms = get_llms()
 
     tracker.end()
 
@@ -49,7 +49,7 @@ def main():
     # Step 5: Generate Answer
     tracker.start("Gemini Answer Generation")
 
-    answer = generate_answer(llm, query, result)
+    answer = generate_answer(llms, query, result)
 
     tracker.end()
 
